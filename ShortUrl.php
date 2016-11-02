@@ -16,9 +16,7 @@ function roonx($method,$datas=[]){
     }
 }
 $update = json_decode(file_get_contents('php://input'));
-$message = $update->message;
 $chat_id = $update->message->chat->id;
-$text = $message->text;
 $from = $update->message->from->id;
 
   if(preg_match('/^([Hh]ttp|[Hh]ttps)(.*)/',$text)){
